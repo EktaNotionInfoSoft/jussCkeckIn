@@ -1,0 +1,7 @@
+ALTER TABLE `tbl_guest_facility` ADD `facility_type` VARCHAR(255) NOT NULL AFTER `description`, ADD `amount` FLOAT(8,2) NOT NULL AFTER `facility_type`;
+
+ALTER TABLE `tbl_coupon_code` ADD `discount_type` ENUM('p','a') NOT NULL COMMENT '\"p->percentage,a->amount\"' AFTER `coupon_code`;
+
+ALTER TABLE `tbl_task` ADD `task_date` DATE NOT NULL AFTER `task_timeline`;
+
+ALTER TABLE `tbl_property` ADD `upload_id` VARCHAR(255) NOT NULL AFTER `image`;
